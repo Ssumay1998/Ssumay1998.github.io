@@ -1,152 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTML笔记1</title>
-    <url>/2020/08/15/HTML%E7%AC%94%E8%AE%B01/</url>
-    <content><![CDATA[<h5 id="HTML-超文本标记语言"><a href="#HTML-超文本标记语言" class="headerlink" title="HTML  超文本标记语言"></a>HTML  超文本标记语言</h5><h5 id="五大浏览器："><a href="#五大浏览器：" class="headerlink" title="五大浏览器："></a>五大浏览器：</h5><table>
-<thead>
-<tr>
-<th>浏览器</th>
-<th>内核</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>IE/Edge</td>
-<td>Trident</td>
-</tr>
-<tr>
-<td>Firefox</td>
-<td>Gecko</td>
-</tr>
-<tr>
-<td>Safari</td>
-<td>WebKit</td>
-</tr>
-<tr>
-<td>Opera</td>
-<td>Presto（13年之后，宣布加入谷歌阵营，弃用）</td>
-</tr>
-<tr>
-<td>Chrome</td>
-<td>Blink （13年从WebKit独立出来，现在chrome和opera都用的blink内核）</td>
-</tr>
-</tbody></table>
-<h6 id="W3C标准由结构-html-表现-css-行为-javascript-三部分组成"><a href="#W3C标准由结构-html-表现-css-行为-javascript-三部分组成" class="headerlink" title="W3C标准由结构(html)   表现(css)  行为(javascript) 三部分组成"></a>W3C标准由结构(html)   表现(css)  行为(javascript) 三部分组成</h6><h6 id="1-标签分块级和行级（内联）两类。"><a href="#1-标签分块级和行级（内联）两类。" class="headerlink" title="1.标签分块级和行级（内联）两类。"></a>1.标签分块级和行级（内联）两类。</h6><p>块级独占一行，能设置宽高，如果不设置，宽度为整行宽度，高度为实际内容高度。</p>
-<p>行级不独占一行，不能设置宽高，宽高为内容实际的宽高。</p>
-<p>块级标签可以通过设置样式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">display:inline</span><br></pre></td></tr></table></figure>
-<p>转换成行级标签<br>行级标签可以通过设置样式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">display:block</span><br></pre></td></tr></table></figure>
-<p>转换成块级标签</p>
-<h6 id="2-常见标签有："><a href="#2-常见标签有：" class="headerlink" title="2.常见标签有："></a>2.常见标签有：</h6><p>块级：<code>div</code>    <code>p</code>    <code>h1-h6</code>    <code>ul</code>    <code>ol</code>    <code>table</code>    <code>address</code>    <code>pre</code>     等</p>
-<p>行级：<code>span</code>    <code>a</code>    <code>b</code>    <code>strong</code>    <code>i</code>    <code>em</code>    <code>sub</code>    <code>sup</code>等</p>
-<p>特殊：<code>img</code>属于行级块标签，相当于执行了</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">display:inline-block</span><br></pre></td></tr></table></figure>
-<p>操作</p>
-<p><code>a</code>链接标签可以执行<code>display:inline-block</code>转换成行级块标签，这样就可以调整宽高样式。</p>
-<h6 id="3-W3C中的嵌套规范"><a href="#3-W3C中的嵌套规范" class="headerlink" title="3.W3C中的嵌套规范"></a>3.W3C中的嵌套规范</h6><blockquote>
-<ol>
-<li>块级元素可以包含块级或行级元素，而行级元素只能包含行级元素。</li>
-<li>2.<code>p</code>    <code>h1-h6</code>    <code>dt</code>    标签中只能包含行级标签，不能再包含块级标签。</li>
-<li>块级与块级并列，行级与行级并列。</li>
-</ol>
-</blockquote>
-<h5 id="form标签"><a href="#form标签" class="headerlink" title="form标签"></a><strong>form</strong>标签</h5><p>1.常用属性：</p>
-<p>​    <strong>name：</strong>表单名称</p>
-<p>​    <strong>action：</strong>表单数据提交的地方（通常是一个后台文件名 .jsp/.php/.asp/.py等，或网址。如果是#，则表示提交到当前文件下）</p>
-<p>​    <strong>method：</strong>前端提交数据到后端的方法，主要有: <strong>post</strong>和<strong>get</strong>。默认是<strong>get</strong></p>
-<p>2.表单元素分为四类：<strong>input</strong>类    <strong>textarea</strong>类    <strong>select</strong>类    <strong>button</strong>类</p>
-<p> 1.<strong>input类</strong>   主要完成输入或按钮发出指令</p>
-<p>type属性值：<strong>text</strong>    <strong>password</strong>    <strong>radio</strong>    <strong>checkbox</strong>    <strong>file</strong>    <strong>button</strong>    <strong>image</strong>    <strong>submit</strong>    <strong>reset</strong></p>
-<blockquote>
-<p>text：单行文本输入框，type默认为text。</p>
-<p>属性：placeholder（文本框里默认显示的提示文字）、name（命名）、value（赋予初始值）、minlength和maxlength（最少和最多输入的值）、readonly（只读）、disabled（不能修改）、pattern（正则匹配）</p>
-</blockquote>
-<blockquote>
-<p>password：密码框 </p>
-<p>属性：与text一致</p>
-</blockquote>
-<blockquote>
-<p>radio：单选框，通常是两项以上。</p>
-<p>属性：name（必须有）、value、checked</p>
-</blockquote>
-<blockquote>
-<p>checkbox：复选框</p>
-<p>属性：与radio大致相同</p>
-</blockquote>
-<blockquote>
-<p>file：文件上传按钮</p>
-</blockquote>
-<blockquote>
-<p>button：普通按钮。通常用它去调用脚本代码</p>
-<p>常用属性：value（按钮上显示的文字）、disabled（失效）</p>
-</blockquote>
-<blockquote>
-<p>image：图片按钮，用法与button一样。它也有提交功能，与submit一致。</p>
-<p>特殊属性：src（用来加载提示图片，用它替换了value）</p>
-</blockquote>
-<blockquote>
-<p>submit：提交按钮，用来将表单数据提交到后台</p>
-<p>reset：重置按钮，用来将表单所有组件输入的内容全部清空，还原至初始状态。</p>
-<p>常用属性：value（按钮上显示的文字）、disabled（失效）</p>
-</blockquote>
-<p> 2.<strong>textarea类</strong>    文本域，多行文本框，主要用于输入大批量的内容</p>
-<blockquote>
-<p>常用属性：name、id、cols（列数）、rows（行数）、pacleholder（默认显示的文字）、required（必须输入）、minlength和maxlength、value</p>
-</blockquote>
-<p> 3.<strong>select类</strong>    下拉列表框  用<code>option</code>呈现每个选项，默认是单项选择</p>
-<blockquote>
-<p>属性：multiple（表示可以多选，这时的下拉列表框变成了列表框）、size（最多显示的行数）</p>
-</blockquote>
-<p> 4.<strong>button类</strong>    普通按钮。可以单独使用，不写在form标签中。如果写在form中有提交功能。</p>
-<h5 id="iframe框架标签"><a href="#iframe框架标签" class="headerlink" title="iframe框架标签"></a><strong>iframe</strong>框架标签</h5><p>框架集，用来将多个网页文件组合成一个文件。</p>
-<p><code>&lt;iframe&gt;</code>标签会创建包含另外一个文档的内联框架，镶嵌在一个网页中的另一个网页。</p>
-<blockquote>
-<p>属性：</p>
-<p>name：框架名</p>
-<p>src：引入的外部html文件</p>
-<p>scrolling：滚动条（yes、no、auto）</p>
-<p>width和height：宽度和高度</p>
-<p>frameborder：是否有边框（1表示有、0表示没有）</p>
-<p>marginheight：框架与顶部和底端的距离（百分比或px表示）</p>
-<p>marginwidth：框架与左边和右边的距离（百分比或px表示）</p>
-</blockquote>
-<p>​    </p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>HTML</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>node安装简洁教程</title>
-    <url>/2020/08/17/node%E5%AE%89%E8%A3%85%E7%AE%80%E6%B4%81%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="先检查本地是否安装node"><a href="#先检查本地是否安装node" class="headerlink" title="先检查本地是否安装node"></a>先检查本地是否安装node</h1><p>命令行输入<code>node</code></p>
-<p>若显示版本信息（如下图），则已经安装。否则下一步。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtwy4ugwij30q20843zj.jpg" alt=""></p>
-<h1 id="mac安装node"><a href="#mac安装node" class="headerlink" title="mac安装node"></a>mac安装node</h1><p>mac 在终端输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
-
-<p>即可安装。</p>
-<h1 id="前往node官网或者nodejs中文网"><a href="#前往node官网或者nodejs中文网" class="headerlink" title="前往node官网或者nodejs中文网"></a>前往<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node官网</a>或者<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">nodejs中文网</a></h1><p>下载对应系统的安装包。</p>
-<p>windows下载好后一路next安装即可。</p>
-<h1 id="确认是否安装完成"><a href="#确认是否安装完成" class="headerlink" title="确认是否安装完成"></a>确认是否安装完成</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 检查node版本</span><br><span class="line">node -v</span><br><span class="line"></span><br><span class="line"># 检查npm包管理工具版本</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtx4wzz3uj30xc090jsv.jpg" alt=""></p>
-<p>出现以上信息则为安装成功。</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>node.js</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git教程</title>
     <url>/2020/08/17/Git%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="前言：版本控制"><a href="#前言：版本控制" class="headerlink" title="前言：版本控制"></a>前言：版本控制</h1><h2 id="什么是版本控制"><a href="#什么是版本控制" class="headerlink" title="什么是版本控制"></a>什么是版本控制</h2><p>版本控制（Revision control）是一种在开发的过程中用于管理我们对文件、目录或工程等内容的修改历史，方便查看更改历史记录，备份以便恢复以前的版本的软件工程技术。</p>
@@ -333,8 +187,352 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>git</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo搭建个人博客(持续更新)</title>
+    <url>/2020/08/17/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>​    我的个人博客使用Hexo博客框架 + Next主题搭建。因为Next 主题能够魔改并且自身集成了很多优秀的第三方插件。</p>
+<p>​    本文主要先介绍 Hexo 博客和 Next 主题的搭建过程，本文参考的博客链接也会直接在文中插入或者在文末标明，如果有遗漏，欢迎指出。</p>
+<h1 id="环境准备（node和git）"><a href="#环境准备（node和git）" class="headerlink" title="环境准备（node和git）"></a>环境准备（node和git）</h1><p>​    在安装hexo框架之前，我们需要先安装node.js和git。具体安装过程可参考<a href="https://ssumay1998.github.io/2020/08/17/node%E5%AE%89%E8%A3%85%E7%AE%80%E6%B4%81%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">nodejs安装教程</a>和<a href="https://ssumay1998.github.io/2020/08/17/Git%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">git教程</a></p>
+<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><h2 id="几个注意事项："><a href="#几个注意事项：" class="headerlink" title="几个注意事项："></a>几个注意事项：</h2><blockquote>
+<ul>
+<li>windows下很多命令既可以使用 windows 的 cmd 命令行来完成，也可以使用刚才安装好的 Git 命令行工具 Git Bash 来完成，但是在 cmd 中部分命令会出现一些问题，建议只使用 Git Bash 来执行命令。</li>
+<li>Hexo 不同版本之间有差别，要注意自己安装的版本是哪个版本，如果修改样式的话注意网上教程的 Hexo 版本差异。</li>
+<li>Hexo 安装好后有 2 种<code>_config.yml</code>文件，一个是 hexo 站点根目录下的全局<code>_config.yml</code>文件，还有一种是每个主题 theme 下的各自的<code>_config.yml</code>文件，注意区分二者，后面会详细说到。</li>
+</ul>
+</blockquote>
+<p>我们在安装过程种使用的命令大多数是 npm 命令，而如果不科学上网的话，使用 npm 命令本身很慢的，我们可以使用淘宝的 cnpm 来替代 npm 命令。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 安装淘宝镜像cnpm</span><br><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>输入以下命令，等待安装完成。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install -g hexo</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建hexo文件夹"><a href="#创建hexo文件夹" class="headerlink" title="创建hexo文件夹"></a>创建hexo文件夹</h2><p>在电脑某个位置创建一个名为 hexo-blog 的文件夹（当然名字可以随便取），比如我个人的就是，由于这个文件夹是你以后存放博客代码和文章的地方，所以最好不要乱放，然后我们使用 cd 命令进入到创建好的文件夹中。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd 你的文件路径</span><br></pre></td></tr></table></figure>
+
+<h2 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h2><p>在上面cd到文件夹里后，输入以下命令初始化：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>这个命令执行的时间非常长，主要是初始化 hexo 博客中的文件夹，包括 hexo 博客内置的各种 node_modules 组件等等，所以耐心的稍等一下！如果初始化失败建议删除文件夹内容后重试。</p>
+<p>初始化完成后，我们打开刚才创建的文件夹，会发现里面包含如下文件夹：</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtxxpu0y3j30as0gw0ue.jpg" alt=""></p>
+<p>注意，其中有一个<code>_config.yml</code>文件，这个我们叫做<strong>站点根目录配置文件</strong>，里面的初始内容如下：（附上中文介绍）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Hexo Configuration</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;configuration.html</span><br><span class="line">## Source: https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo&#x2F;</span><br><span class="line"></span><br><span class="line"># Site 站点主配置</span><br><span class="line">title: Hexo  # 网站标题</span><br><span class="line">subtitle:    # 网站副标题</span><br><span class="line">description:   # 网站描述</span><br><span class="line">keywords:      # 可以不填写保持默认</span><br><span class="line">author: John Doe  # 网站拥有者昵称</span><br><span class="line">language:    # 网站语言设置，一般根据依赖的主题而定</span><br><span class="line">timezone:    # 网站时区设置，一般不填写保持默认</span><br><span class="line"></span><br><span class="line"># URL地址链接设置</span><br><span class="line">url: http:&#x2F;&#x2F;yoursite.com   # 网站url设置</span><br><span class="line">root: &#x2F;                    # 网站根目录链接</span><br><span class="line">permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;   # 文章链接，默认是按照 &#x2F;年&#x2F;月&#x2F;日&#x2F;文章标题 设置的链接</span><br><span class="line">permalink_defaults:                    # 默认链接形式</span><br><span class="line"></span><br><span class="line"># Directory  网站主要目录，这里一般不做改动</span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads&#x2F;code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"></span><br><span class="line"># Writing  网站文章设置，同样一般不做改动</span><br><span class="line">new_post_name: :title.md  # File name of new posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: false</span><br><span class="line">post_asset_folder: false</span><br><span class="line">relative_link: false</span><br><span class="line">future: true</span><br><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  line_number: true</span><br><span class="line">  auto_detect: false</span><br><span class="line">  tab_replace:</span><br><span class="line">  </span><br><span class="line"># Home page setting  主页设置，一般不做改动</span><br><span class="line">index_generator:</span><br><span class="line">  path: &#39;&#39;</span><br><span class="line">  per_page: 10</span><br><span class="line">  order_by: -date  # 首页文章排序，默认是按照文章日期递减</span><br><span class="line">  </span><br><span class="line"># Category &amp; Tag  分类设置，一般不做改动</span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"># Date &#x2F; Time format  日期设置，一般不做改动</span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"># Pagination  导航页设置，一般不做改动</span><br><span class="line">per_page: 10   # 设置每页展示多少文章</span><br><span class="line">pagination_dir: page</span><br><span class="line"></span><br><span class="line"># Extensions  使用的主题名称，可以在这里切换</span><br><span class="line">theme: next  # 此处切换主题名称</span><br><span class="line"></span><br><span class="line"># Deployment  部署，一般选择部署到Github上</span><br><span class="line">deploy:</span><br><span class="line">  type:</span><br></pre></td></tr></table></figure>
+
+<p>其实到这里来说，我们的 hexo 博客已经做好了！我们执行下面命令看看：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 在根目录里执行</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>然后我们打开浏览器，输入<code>http://localhost:4000</code></p>
+<p>就会发现博客已经搭建好了</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghty0evrzrj31em0u0afn.jpg" alt=""></p>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p>打开 hexo-blog 目录下的 themes 文件夹，发现里面有一个 landscape 文件夹，没错，你刚才看到的默认主题就是这个名叫<code>landscape</code>的主题，这个主题是 hexo 博客自带的默认主题，当然我们可以下载其它主题来代替它，具体方式在后面会介绍。</p>
+<p>然后我们先来分析一下这个 landscape 主题文件夹：</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghty4gwboqj30bi0m2wgb.jpg" alt=""></p>
+<p>注意这里面有一个<code>_config.yml</code>配置文件，其实上面已经强调过，这个跟前面的<strong>站点根目录下配置文件</strong>同名，但是这个配置文件是在<code>themes</code>目录下的，那么这个配置文件我们一般就叫做<strong>主题配置文件</strong>，基本每个 hexo 博客第三方主题下面都会有这个配置文件，所以主题配置文件是一种统称。</p>
+<p>里面的初始内容我们暂时不管（因为不同主题的配置文件内容不一样）。</p>
+<p>先来看看上面的 languages 文件夹，一看就懂，都知道这就是网站语言配置文件，好，我们进去看一下，噢~里面的 zh-CN 和 zh-TW 可不就是中文吗。其中 zh-CN 指的是简体中文，zh-TW（台湾）是繁体中文。</p>
+<p>然后我们再去站点根目录下，注意这里是站点根目录下（hexo-blog/_config.yml）的配置文件中（千万别错了），将这里：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Site 站点主配置</span><br><span class="line">title: SsumayZhou  &#x2F;&#x2F;网站标题修改</span><br><span class="line">subtitle:     &#x2F;&#x2F;副标题修改</span><br><span class="line">description:  &#x2F;&#x2F;网站描述</span><br><span class="line">keywords: hexo,next,博客    &#x2F;&#x2F;网站关键字,用英文逗号分开</span><br><span class="line">author: ssumayzhou   &#x2F;&#x2F;此处填写你自己的昵称  </span><br><span class="line">+ language: zh-CN    &#x2F;&#x2F;这里改成上面在主题配置文件中看到的语言名字，注意英文冒号:后面有一个空格</span><br><span class="line">timezone:   &#x2F;&#x2F;网站时区，保持默认就可以了</span><br></pre></td></tr></table></figure>
+
+<p>更改完后，我们回命令行，输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>再重新打开浏览器刷新即可看到变化。</p>
+<p>现在先说一下上面的命令中的<code>hexo s</code>和<code>hexo g</code>是什么东西。</p>
+<p><code>hexo s</code>是启动 hexo 服务的，可以理解为是<code>hexo serve</code>或者<code>hexo start</code>，一般都是简写为<code>hexo s</code>，而<code>hexo g</code>是重新生成 public 文件夹的命令，全称是<code>hexo generator</code>，那么 public 文件夹是什么呢？重新看一下文件目录：</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtxxpu0y3j30as0gw0ue.jpg" alt=""></p>
+<p>这个 public 文件夹里面就是生成的所有静态文件，包括 html，css，js 文件以及图片等，稍微懂一些前端的人就知道这个文件夹就是你的博客被 node.js 渲染后生成的最终文件夹，这个文件夹中点开 index.html 就能看到你的博客页面了！</p>
+<p>简单点来说如果在本地修改了什么文件内容，可以使用<code>hexo g</code> 命令重新生成一下<code>public</code>文件夹，那么这个文件夹只要修改了，再使用<code>hexo s</code>启动服务就可以看到页面变化了。</p>
+<p>当然<code>hexo s</code>本身就具有在线调试的功能，如果<code>hexo s</code>无法刷新页面修改内容，那么使用<code>hexo g 和 hexo s</code>就可以看到更改内容啦~</p>
+<h2 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h2><p>博客基本框架完成后，我们做的第一件事就是创建第一篇个人博客啦！可以在命令行cd 到 hexo-blog 根目录，使用如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 创建一篇新的博客，标题为&quot;我的第一篇博客&quot;</span><br><span class="line">hexo n &quot;我的第一篇博客&quot;</span><br></pre></td></tr></table></figure>
+
+<p>就可以在<code>hexo-blog/source/_posts</code>文件下面新建一个<code>.md</code>文件，这个 <code>.md</code> 文件就是 Markdown 文件，所以我们写博客只要在本地编辑这个 Markdown 文件就可以了。Markdown 语法可以百度自行学习。</p>
+<h1 id="将Hexo博客部署到Github上"><a href="#将Hexo博客部署到Github上" class="headerlink" title="将Hexo博客部署到Github上"></a>将Hexo博客部署到Github上</h1><p>为什么要部署到 Github上呢，当然有以下原因：</p>
+<ol>
+<li>因为 Hexo 博客都是静态文件，GithubPages 自身就支持静态文件。</li>
+<li>免费方便，不用花一分钱就可以自己搭建一个自由的个人博客，并且没有服务器没有后台。</li>
+<li>可以随意绑定自己的域名，并且可以一键开启 HTTPS，很方便。</li>
+<li>数据绝对安全，github 可以恢复任意版本。</li>
+<li>博客内容可以轻松打包、转移以及发布到其它平台。</li>
+</ol>
+<p>准备好自己的github账号。没有的可以在<a href="https://github.com/" target="_blank" rel="noopener">Github官网</a>注册一个。</p>
+<h2 id="创建Github仓库"><a href="#创建Github仓库" class="headerlink" title="创建Github仓库"></a>创建Github仓库</h2><p>首先我们需要在 Github 上创建一个 repository，就是创建一个仓库的意思，在登录账号后首页就有一个显眼的 create new repository，点进去就可以看到了，注意名字必须为你的<code>用户名.github.io</code>，如下图：</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtyszuj2wj30y10u0grn.jpg" alt=""></p>
+<p>因为我的已经创建过了所以显示已存在。</p>
+<p>注意不能设置为其它名字，只能用这个仓库名。这样设置以后，我们在不绑定域名的前提下，可以直接使用<code>http://用户名.github.io</code>来访问自己的个人博客，这样就相当于有一个个人域名，并且是永久免费的！</p>
+<h2 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h2><p>如果是第一次在自己的本机上使用 Git 上传到 Github 上，那么必须配置 <code>SSH key</code> ，表示 Github 允许这台机器有权限使用 Git 上传代码到远端仓库。</p>
+<p>我们可以中使用<code>cd ~/.ssh</code>命令来查看本机已经存在的 ssh 密钥，如果是第一次使用会显示<code>No such file or directory</code>，如果不是的话，就需要用已经存在的密钥或者重新生成一份了。</p>
+<p>然后输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot;</span><br></pre></td></tr></table></figure>
+
+<p>上面的邮件地址就是你的 Github 注册邮箱地址，在提示后连续回车，最终会生成一个.ssh文件夹在 C 盘用户目录下面</p>
+<p>打开这个 .ssh 文件，里面存放了密钥，然后我们打开自己的 Github 个人主页，进入<code>个人设置 -&gt; SSH and GPG keys -&gt; New SSH key</code></p>
+<p>上面的 Title 可以任意填写，下面的 key 注意要打开 .ssh 文件，将密钥复制进去。</p>
+<h3 id="测试是否成功"><a href="#测试是否成功" class="headerlink" title="测试是否成功"></a>测试是否成功</h3><p>使用如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com # 注意邮箱地址不用改</span><br></pre></td></tr></table></figure>
+
+<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code>点击yes，会显示</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Hi Ssumay1998! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+
+<p>看到这个信息就说明 SSH 已经配置成功！</p>
+<h2 id="配置Git提交的用户信息"><a href="#配置Git提交的用户信息" class="headerlink" title="配置Git提交的用户信息"></a>配置Git提交的用户信息</h2><p>上面配置成功后，我们就可以设置 Git 的全局用户信息了，这个信息设置当前 Git 命令上传代码的用户信息。已经设置过的跳过</p>
+<p>使用以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;XXXXX&quot; &#x2F;&#x2F; 你的github用户名，非昵称</span><br><span class="line"></span><br><span class="line">git config --global user.email  &quot;XXXXX@qq.com&quot; &#x2F;&#x2F; 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
+
+<p>配置完成后以后提交代码都是使用的这个用户信息进行提交的。</p>
+<h3 id="将-Hexo-博客部署到-Github-上"><a href="#将-Hexo-博客部署到-Github-上" class="headerlink" title="将 Hexo 博客部署到 Github 上"></a>将 Hexo 博客部署到 Github 上</h3><p>首先打开 hexo-blog 站点的配置文件<code>_config.yml</code>，找到 deloy 并填写如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:Ssumay1998&#x2F;Ssumay1998.github.io.git # 用户名改成你自己的</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: github</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;Ssumay1998&#x2F;Ssumay1998.github.io.git # 用户名改成你自己的 </span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>无论是哪种写法，此时直接执行<code>hexo d</code>的话一般会报如下错误： <code>Deployer not found: github 或者 Deployer not found: git</code></p>
+<p>原因是还需要安装一个插件<code>hexo-deployer-git</code>，我们可以在 Git 中 cd 到 hexo-blog 根目录，并输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后我们可以使用以下命令来部署到 Github 上。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>可以使用<code>hexo s</code> 在本地预览。</p>
+<h1 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Next主题"></a>安装Next主题</h1><p>由于默认的主题 landscape 界面比较丑（当然魔改也是可以的），我们可以使用 Hexo 官方推荐的主题：<a href="https://hexo.io/themes" target="_blank" rel="noopener">https://hexo.io/themes</a> ，如果喜欢这里面的某些主题，可以直接去上面主题对应的界面中的 Github 中下载（下载方式与稍后介绍的下载 Next 主题一样）。</p>
+<p>目前在 Github 上 star 数量比较多的有 Next 主题、yillia 主题等，Next 主题基本占据了 Hexo 博客的半壁江山，并且 Next 主题集成功能较多，因此我下面只介绍 Next 主题的使用方式。</p>
+<p>首先我们可以打开 Github，全局搜索<code>hexo-next</code></p>
+<h2 id="下载Next主题"><a href="#下载Next主题" class="headerlink" title="下载Next主题"></a>下载Next主题</h2><p>以下均以 Next6 版本为例，Next5 版本操作基本一样。</p>
+<p>进入<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
+<p>参考下面的文档说明。两种安装方式：</p>
+<ol>
+<li><p>cd 到博客根目录下，然后使用 git clone 命令将 Next 仓库克隆到 hexo 目录下的<code>themes/next</code>，即命令是</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next.git themes&#x2F;next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>直接在 Github 页面上选择绿色的按钮<code>Clone or Download</code>，点击下载 zip 压缩包。</p>
+</li>
+</ol>
+<p>如果第一种方式比较慢的话，可以直接选择第二种方式直接下载，然后将下载好的压缩包解压后放在博客目录的<code>themes</code>文件夹下面，<code>git clone</code>的话也是在这个下面，下载好后的名字可以任取。</p>
+<h2 id="更新Next主题"><a href="#更新Next主题" class="headerlink" title="更新Next主题"></a>更新Next主题</h2><p>进入博客根目录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 进入next目录里</span><br><span class="line">cd themes&#x2F;next</span><br><span class="line"></span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<h2 id="将Next主题设置为hexo博客的默认主题"><a href="#将Next主题设置为hexo博客的默认主题" class="headerlink" title="将Next主题设置为hexo博客的默认主题"></a>将Next主题设置为hexo博客的默认主题</h2><p>在站点根目录下<code>_config.yml</code>配置文件中，找到如下代码并进行配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: hexo-theme-next   # 此处填入你在themes目录下的next主题文件名</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试Next主题是否安装成功"><a href="#测试Next主题是否安装成功" class="headerlink" title="测试Next主题是否安装成功"></a>测试Next主题是否安装成功</h2><p>在命令行中重新运行博客</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>等待启动完成在浏览器中输入<code>http://localhost:4000</code>即可查看安装好的 Next 主题！</p>
+<h1 id="Next主题基本功能配置"><a href="#Next主题基本功能配置" class="headerlink" title="Next主题基本功能配置"></a>Next主题基本功能配置</h1><p>Next 主题安装好后的初始界面也是很简洁的，我们可以先设置一些常用功能。</p>
+<p>首先为了防止错误，再次友情提醒：在这里修改的一律是主题配置文件<code>_config.yml</code>，目录是<code>hexo/themes/next/_config.yml</code>，千万不要走错地方了！</p>
+<p>我们打开这个<code>_config.yml</code>主题配置文件对应一一修改。</p>
+<blockquote>
+<p>由于配置文件是. yml格式，如果对 yml 语法不太熟的小伙伴，注意每个配置之间都必须有空格，不然报错。如<code>override: false</code>，注意英文冒号<code>:</code>后面有一个空格，所有 yml 语法都是这样。</p>
+</blockquote>
+<p>以下默认使用的文本编辑器为vscode，主题使用的是 Next6 版本（注意 Next 官方会不断进行更新，所以下面的不一定都有效，因为官方正在不断集成更多功能，具体地可以自行在配置文件中探索）</p>
+<p>以下均在<code>hexo s</code>在线调试环境中进行修改</p>
+<h2 id="网站favicon图标设置"><a href="#网站favicon图标设置" class="headerlink" title="网站favicon图标设置"></a>网站favicon图标设置</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtztjr5mmj30cy01yglk.jpg" alt=""></p>
+<p>favicon图标就是网页title边上的图标。所以我们也可以给自己的网站添加一个 favicon 图标，使用vscode打开<code>_config.yml</code>主题配置文件后，使用<code>Ctrl+F</code>搜索<code>favicon</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: &#x2F;images&#x2F;favicon-16x16-next.png  # 网站小图标</span><br><span class="line">  medium: &#x2F;images&#x2F;favicon-32x32-next.png   # 中等图标</span><br><span class="line">  apple_touch_icon: &#x2F;images&#x2F;apple-touch-icon-next.png  # app_touch上显示图标   </span><br><span class="line">  safari_pinned_tab: &#x2F;images&#x2F;logo.svg   # 在Safari浏览器中显示图标</span><br><span class="line">  #android_manifest: &#x2F;images&#x2F;manifest.json  # 安卓默认显示同普通情况下</span><br><span class="line">  #ms_browserconfig: &#x2F;images&#x2F;browserconfig.xml</span><br></pre></td></tr></table></figure>
+
+<p>网站 favicon 图标可以放到你的 next 主题目录下面的<code>source/images</code>中，然后按照上述相对路径方式引用，这里 favicon 图标不需要非得是 ico 格式的，也可以是 png 或其它图片格式。</p>
+<p>如果是有第三方图床放图片链接的，也可以直接改成图片链接。</p>
+<h2 id="网站页脚的红色小心自定义"><a href="#网站页脚的红色小心自定义" class="headerlink" title="网站页脚的红色小心自定义"></a>网站页脚的红色小心自定义</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtzx3hyqtj30k603ewf0.jpg" alt=""></p>
+<p>搜索footer，设置如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">footer:</span><br><span class="line">  # 指定网站开始运行的年份，如果不指定，则默认为当前年份</span><br><span class="line">  since: 2019</span><br><span class="line"></span><br><span class="line">  # 在页脚年份和版权信息中间显示的图标</span><br><span class="line">  icon:</span><br><span class="line">    # 图标形状显示，可以参考 https:&#x2F;&#x2F;fontawesome.com&#x2F;v4.7.0&#x2F;icons 中的名字</span><br><span class="line">    # 官方建议使用 heart 图标，颜色设置为 #ff0000，这也显示的是跳动的心</span><br><span class="line">    name: heart</span><br><span class="line">    # 如果想要图标跳动，下面设置为 true</span><br><span class="line">    animated: true</span><br><span class="line">    # 改变图标颜色</span><br><span class="line">    color: &quot;#ff0000&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="关闭底部-由hexo强力驱动的广告"><a href="#关闭底部-由hexo强力驱动的广告" class="headerlink" title="关闭底部 由hexo强力驱动的广告"></a>关闭底部 由hexo强力驱动的广告</h2><p>由于默认的页面中 hexo 会在网页底部居中位置打个广告，但是官方还是很良心的在配置文件中设置了广告开关，还是在上面 footer 中，如下配置全部设置为 false 就可以关闭广告了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">powered:</span><br><span class="line">  # Hexo link (Powered by Hexo).</span><br><span class="line">  enable: false</span><br><span class="line">  # Version info of Hexo after Hexo link (vX.X.X).</span><br><span class="line">  version: false</span><br><span class="line"></span><br><span class="line">theme:</span><br><span class="line">  # Theme &amp; scheme info link (Theme - NexT.scheme).</span><br><span class="line">  enable: false</span><br><span class="line">  # Version info of NexT after scheme info (vX.X.X).</span><br><span class="line">  version: false</span><br></pre></td></tr></table></figure>
+
+<h2 id="菜单栏设置"><a href="#菜单栏设置" class="headerlink" title="菜单栏设置"></a>菜单栏设置</h2><p>在配置文件中搜索 menu，找到如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  #about: &#x2F;about&#x2F; || user</span><br><span class="line">  #tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  #categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || heartbeat</span><br><span class="line"></span><br><span class="line"># Enable&#x2F;Disable menu icons.</span><br><span class="line">menu_icons:</span><br><span class="line">  enable: true  #表示是否显示菜单图标icons</span><br><span class="line">  badges: false  # 显示每个菜单下面有多少个内容</span><br></pre></td></tr></table></figure>
+
+<p>其中<code>||</code>后面表示的 Fontawesome 中的图标名称，如果想要修改图标，可以去<a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener">FontAwesome官网</a>找自己喜欢的图标样式，前面部分<code>/about/</code>是表示该菜单的相对链接，比如网站主页访问是<code>https://bestzuo.cn</code>，那么点击这个菜单栏的链接就变成了<code>https://bestzuo.cn/about/</code>这种形式。</p>
+<p>如果需要增加菜单栏的话，可以在命令行中输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 菜单栏增加 photos</span><br><span class="line">hexo n page &quot;photos&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这样就会自动在<code>hexo/source</code>目录下生成一个文件夹，而且里面是一个<code>index.md</code>文件，Node.js 最终会把这个 md 文件渲染成 html 文件，所以菜单栏中内容就在这个 md 文件中写就可以，并且文章内支持 html 写法，所以具有很强的扩展性。</p>
+<p>创建之后，就需要在配置文件这个地方添加上新增菜单的名称以及链接格式和 FontAwesome 图标，然后打开<code>hexo/themes/next/languages/zh-CN.yml</code>文件，在 menu 下面按照格式汉化你的菜单栏名称</p>
+<h2 id="Next主题四种风格设置"><a href="#Next主题四种风格设置" class="headerlink" title="Next主题四种风格设置"></a>Next主题四种风格设置</h2><p>Next 主题支持四种内置风格，每个人喜欢的风格都不同，可以在基础风格上继续进行魔改。</p>
+<p>搜索 schema，找到如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<p>四种风格样式可以自己进行切换，可以在本地<code>hexo g &amp;&amp; hexo s</code>后在线调试这个地方的代码，喜欢哪个就选哪个吧</p>
+<h2 id="社交链接设置"><a href="#社交链接设置" class="headerlink" title="社交链接设置"></a>社交链接设置</h2><p>社交链接主要是在侧边栏中展示的，一般都是自己的各种网站主页。搜索 social，找到如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#social:</span><br><span class="line">  #GitHub: https:&#x2F;&#x2F;github.com&#x2F;yourname || github</span><br><span class="line">  #E-Mail: mailto:yourname@gmail.com || envelope</span><br><span class="line">  #Google: https:&#x2F;&#x2F;plus.google.com&#x2F;yourname || google</span><br><span class="line">  #Twitter: https:&#x2F;&#x2F;twitter.com&#x2F;yourname || twitter</span><br><span class="line">  #FB Page: https:&#x2F;&#x2F;www.facebook.com&#x2F;yourname || facebook</span><br><span class="line">  #VK Group: https:&#x2F;&#x2F;vk.com&#x2F;yourname || vk</span><br><span class="line">  #StackOverflow: https:&#x2F;&#x2F;stackoverflow.com&#x2F;yourname || stack-overflow</span><br><span class="line">  #YouTube: https:&#x2F;&#x2F;youtube.com&#x2F;yourname || youtube</span><br><span class="line">  #Instagram: https:&#x2F;&#x2F;instagram.com&#x2F;yourname || instagram</span><br><span class="line">  #Skype: skype:yourname?call|chat || skype</span><br></pre></td></tr></table></figure>
+
+<p>后面的 yourname 改成你自己在对应网站的 ID，然后将前面的 # 注释去掉。其中<code>||</code>后面还是表示该链接前面的图标在 FontAwesome 中的名称，可以进行自定义修改。</p>
+<h2 id="友情链接设置"><a href="#友情链接设置" class="headerlink" title="友情链接设置"></a>友情链接设置</h2><p>友情链接也是处于侧边栏中的，这里可以完全自定义内容，一般可以用来放社交圈子链接（不过一般博客都会单独做一个页面放其它人的博客友链）。搜索 links，找到如下配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Blog rolls</span><br><span class="line">links_icon: link</span><br><span class="line">links_title: Links</span><br><span class="line">links_layout: block</span><br><span class="line">#links_layout: inline</span><br><span class="line">#links:</span><br><span class="line">  #Title: http:&#x2F;&#x2F;example.com&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>这里可以添加你想要的友情链接，比如可以添加百度链接：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Blog rolls</span><br><span class="line">links_icon: link  # 链接对应的Fontawesome图标名称</span><br><span class="line">links_title: Links # 设置链接标题，可以自定义</span><br><span class="line">links_layout: block   # 图标布局方式，有inline和block两种</span><br><span class="line">#links_layout: inline</span><br><span class="line">links:</span><br><span class="line">  Baidu: https:&#x2F;&#x2F;www.baidu.com&#x2F;</span><br><span class="line">  Github: https:&#x2F;&#x2F;github.com&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="侧边栏设置"><a href="#侧边栏设置" class="headerlink" title="侧边栏设置"></a>侧边栏设置</h2><p>搜索 sidebar，找到如下配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  # Sidebar Position, available value: left | right (only for Pisces | Gemini).</span><br><span class="line">  # 此处设置只适用于Pisces或者Gemini风格</span><br><span class="line">  position: left</span><br><span class="line">  #position: right</span><br><span class="line"></span><br><span class="line">  # 侧边栏如何展示</span><br><span class="line">  display: post    # 侧边栏在打开文章的时候显示</span><br><span class="line">  #display: always  # 侧边栏不管在哪都显示</span><br><span class="line">  #display: hide    # 隐藏侧边栏</span><br><span class="line">  #display: remove  # 移除侧边栏</span><br><span class="line"></span><br><span class="line">  # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).</span><br><span class="line">  offset: 12</span><br><span class="line"></span><br><span class="line">  # 设置返回页面顶部设置，只适用于Pisces或者Gemini风格，建议开启</span><br><span class="line">  b2t: true</span><br><span class="line"></span><br><span class="line">  # 显示浏览百分比，建议开启</span><br><span class="line">  scrollpercent: true</span><br><span class="line"></span><br><span class="line">  # Enable sidebar on narrow view (only for Muse | Mist).</span><br><span class="line">  onmobile: false</span><br></pre></td></tr></table></figure>
+
+<h2 id="文章开启阅读更多按钮"><a href="#文章开启阅读更多按钮" class="headerlink" title="文章开启阅读更多按钮"></a>文章开启阅读更多按钮</h2><p>如果不开启阅读更多按钮的话，默认是展示文章中所有内容的，这显然体验不好。</p>
+<p>一般都会在文章中插入<code>&lt;!--more--&gt;</code>这种注释形式表示首页展示到注释处为止。或者会使用如下官方配置文件中自带的方式。一般都推荐使用注释的方式，因为下面这种<code>auto_excerpt</code>方式不会保留前面的行文样式，但是注释方式会保留样式。</p>
+<p>搜索 auto_excerpt，找到如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">auto_excerpt:  </span><br><span class="line">	enable: true  </span><br><span class="line">	length: 150 #到多少字数后不显示</span><br></pre></td></tr></table></figure>
+
+<p>默认是关闭的，也就是首页上默认显示整篇文章，而为了显示阅读更多按钮，我们可以开启这个服务。</p>
+<h2 id="文章元数据设置"><a href="#文章元数据设置" class="headerlink" title="文章元数据设置"></a>文章元数据设置</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghu0uxi6z1j30gs03eaai.jpg" alt=""></p>
+<p>元数据就是显示在 home 页的文章创建于、更新于、阅读次数之类的数据，搜索 post_meta，找到如下配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">post_meta:</span><br><span class="line">  item_text: true  # 是否显示对应的文字</span><br><span class="line">  created_at: true  # 是否显示 创建于</span><br><span class="line">  updated_at:       # 是否显示 更新于</span><br><span class="line">    enabled: false</span><br><span class="line">    # 更新日期显示规则，只有更新日期与创建日期不同时，才会显示</span><br><span class="line">    another_day: true</span><br><span class="line">  categories: true # 是否显示分类信息</span><br></pre></td></tr></table></figure>
+
+<h2 id="文章字数统计设置"><a href="#文章字数统计设置" class="headerlink" title="文章字数统计设置"></a>文章字数统计设置</h2><p>由于上面元数据中没有带统计文章字数功能，所以需要利用插件来生成，搜索 post_wordcount，找到如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-symbols-count-time</span><br><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true</span><br><span class="line">  item_text_post: true</span><br><span class="line">  item_text_total: false</span><br><span class="line">  awl: 4</span><br><span class="line">  wpm: 275</span><br></pre></td></tr></table></figure>
+
+<p>注意开启上述设置必须要添加<code>hexo-symbols-count-time</code>模块依赖，即在 hexo-blog 站点根目录下使用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<p>安装模块后开启上述功能使用。</p>
+<h2 id="侧边栏头像设置"><a href="#侧边栏头像设置" class="headerlink" title="侧边栏头像设置"></a>侧边栏头像设置</h2><p>侧边栏中没有博主头像是没有灵魂的。Next6 主题中自带鼠标放在头像上能旋转 360度的功能，如果是 Next5 的话需要自己手动配置。搜索 avatar，找到如下配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar:</span><br><span class="line">  # 如果放在本地(source&#x2F;images): &#x2F;images&#x2F;avatar.gif</span><br><span class="line">  # 如果第三方图床，直接写地址</span><br><span class="line">  url:  # 此处是头像的地址</span><br><span class="line">  rounded: true   # 设置头像是否为圆形</span><br><span class="line">  opacity: 1    # 设置不透明度，1为完全不透明，0为完全透明</span><br><span class="line">  rotated: true   # 设置鼠标放到头像上是否旋转</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码块设置"><a href="#代码块设置" class="headerlink" title="代码块设置"></a>代码块设置</h2><p>Next6 中自带了复制代码按钮，Next5 需要自己手动配置。</p>
+<p>搜索 codeblock，找到如下配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">	border_radius: 8   # 按钮圆滑度</span><br><span class="line">	copy_button:  # 设置是否开启代码块复制按钮</span><br><span class="line">		enable: true</span><br><span class="line">		show_result: true  # 是否显示复制成功信息</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码块风格设置"><a href="#代码块风格设置" class="headerlink" title="代码块风格设置"></a>代码块风格设置</h2><p>搜索 highlight_theme，有以下多种风格:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Code Highlight theme</span><br><span class="line"># Available values: normal | night | night eighties | night blue | night bright</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;chriskempson&#x2F;tomorrow-theme</span><br><span class="line">highlight_theme: night eighties</span><br></pre></td></tr></table></figure>
+
+<p>可以自己修改上面 normal 、night 、 night eighties 、 night blue 、night bright 在线调试选择自己喜欢的风格。</p>
+<h2 id="开启文章打赏按钮"><a href="#开启文章打赏按钮" class="headerlink" title="开启文章打赏按钮"></a>开启文章打赏按钮</h2><p>一篇辛辛苦苦敲出来的文章，不妨开启一下文章打赏功能，万一真有人给你棒棒糖呢😆 ~</p>
+<p>搜索 reward，找到如下配置并修改：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Reward</span><br><span class="line">reward_comment: &lt;p style&#x3D;&quot;font-size:14px; color:#34495e; margin:0 0 5px 0;&quot;&gt;赞赏一下吧～ 还可以关注公众号订阅最新内容&lt;&#x2F;p&gt;</span><br><span class="line">wechatpay: # 微信收款图片地址</span><br><span class="line">alipay:  # 支付宝收款图片地址</span><br><span class="line">#bitcoin: &#x2F;images&#x2F;bitcoin.png  # 比特币</span><br></pre></td></tr></table></figure>
+
+<h2 id="开启相关文章推荐功能"><a href="#开启相关文章推荐功能" class="headerlink" title="开启相关文章推荐功能"></a>开启相关文章推荐功能</h2><p>要优化读者体验的话，可以在读者阅读完一篇文章后，能自动推荐相关内容的文章，不仅能考虑读者感受，还能给自己博客文章带来阅读量，岂不是一举两得😆 ？</p>
+<p>搜索 related_posts，找到如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">related_posts:</span><br><span class="line">  enable: true  # 是否开启</span><br><span class="line">  title: 相关文章推荐    # 标题</span><br><span class="line">  display_in_home: false # 是否在首页显示，建议为false</span><br><span class="line">  params:</span><br><span class="line">    maxCount: 5   # 相关文章的最大数量</span><br><span class="line">    #PPMixingRate: 0.0</span><br><span class="line">    #isDate: false</span><br><span class="line">    #isImage: false</span><br><span class="line">    #isExcerpt: false</span><br></pre></td></tr></table></figure>
+
+<p>开启相关文章推荐需要安装<code>hexo-related-popular-posts</code>模块，即在 hexo 站点根目录下使用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-related-popular-posts --save</span><br></pre></td></tr></table></figure>
+
+<p>安装模块，然后开启上面的相关文章功能就可以啦</p>
+<h2 id="开启文章版本信息"><a href="#开启文章版本信息" class="headerlink" title="开启文章版本信息"></a>开启文章版本信息</h2><p>搜索 post_copyright，找到配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">post_copyright:</span><br><span class="line">  enable: false</span><br><span class="line">  license: CC BY-NC-SA 3.0</span><br><span class="line">  license_url: https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;3.0&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>设置为 true 可以打开，这样在每篇文章最后都会有版权提示。</p>
+<h2 id="添加valine评论系统"><a href="#添加valine评论系统" class="headerlink" title="添加valine评论系统"></a>添加valine评论系统</h2><p>没有评论系统的博客是没有灵魂的，不仅如此，当前免费开源的评论系统中，valine 因为简洁并且支持匿名留言得到很多博主的喜爱，而像其它的来必力（韩国的）、Gitalk（Github的）等都有这样那样的缺点，不太建议使用。</p>
+<p>需要注意的是valine后台评论保存是依赖于 leancloud的，leancloud 是一个面向个人用户免费的存储系统（当然不止是提供存储功能，还有其它服务），我们需要在 leancloud 官网注册，具体步骤可以看<a href="https://valine.js.org/" target="_blank" rel="noopener">valine的官方文档</a>介绍。</p>
+<p>搜索 valine，找到如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid:   # your leancloud application appid</span><br><span class="line">  appkey:  # your leancloud application appkey</span><br><span class="line">  notify: false # mail notifier , https:&#x2F;&#x2F;github.com&#x2F;xCss&#x2F;Valine&#x2F;wiki</span><br><span class="line">  verify: false # Verification code</span><br><span class="line">  placeholder: 留下邮箱，有回复时你将收到提醒，邮箱不会被公开。 # comment box placeholder</span><br><span class="line">  avatar: wavatar # gravatar style https:&#x2F;&#x2F;valine.js.org&#x2F;avatar&#x2F;</span><br><span class="line">  guest_info: nick,mail # custom comment header default: nick,mail,link</span><br><span class="line">  pageSize: 10 # pagination size</span><br></pre></td></tr></table></figure>
+
+<p>注意由于 valine 依赖于 leancloud 存储服务，因此要先去<a href="https://leancloud.cn/" target="_blank" rel="noopener">https://leancloud.cn</a> 网站注册，获取到 appid 和 appkey 后放到这里就 ok 了。其中 avatar 是设置默认头像，可以去<a href="https://valine.js.org/avatar" target="_blank" rel="noopener">https://valine.js.org/avatar</a> 选择默认头像，然后在这里设置名字即可。具体使用可以参考<a href="https://valine.js.org/" target="_blank" rel="noopener">valine的官方文档</a>。</p>
+<h2 id="开启分享按钮"><a href="#开启分享按钮" class="headerlink" title="开启分享按钮"></a>开启分享按钮</h2><p>百度分享对国内网站来说更友好一些，搜索 baidushare，找到如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">baidushare:</span><br><span class="line">  type: button  # 设置分享按钮的风格，有button何slide形式</span><br></pre></td></tr></table></figure>
+
+<p>将注释去掉打开即可，虽然说是默认不支持 https 格式，但是网上有解决方案，可以 Google 一下。</p>
+<p>如果嫌麻烦的话，也可以使用下面支持 https 的 needmoreshare。如果要开启 needmoreshare 的话，可以搜索 needmoreshare2，找到如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">needmoreshare2:</span><br><span class="line">  enable: false</span><br><span class="line">  postbottom:</span><br><span class="line">    enable: false</span><br><span class="line">    options:</span><br><span class="line">      iconStyle: box</span><br><span class="line">      boxForm: horizontal</span><br><span class="line">      position: bottomCenter</span><br><span class="line">      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook</span><br><span class="line">  float:</span><br><span class="line">    enable: false</span><br><span class="line">    options:</span><br><span class="line">      iconStyle: box</span><br><span class="line">      boxForm: horizontal</span><br><span class="line">      position: middleRight</span><br><span class="line">      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook</span><br></pre></td></tr></table></figure>
+
+<p>注意 needmoreshare2 是依赖 <code>theme-next-needmoreshare2</code> 模块的，可以去<a href="https://github.com/theme-next/theme-next-needmoreshare2" target="_blank" rel="noopener">https://github.com/theme-next/theme-next-needmoreshare2</a> 找到使用方法。</p>
+<h2 id="设置文章阅读量"><a href="#设置文章阅读量" class="headerlink" title="设置文章阅读量"></a>设置文章阅读量</h2><p>搜索 leancloud_visitors，并进行如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line">  enable: true</span><br><span class="line">  app_id: </span><br><span class="line">  app_key: </span><br><span class="line">  # Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-leancloud-counter-security</span><br><span class="line">  # If you don&#39;t care about security in lc counter and just want to use it directly</span><br><span class="line">  # (without hexo-leancloud-counter-security plugin), set the &#96;security&#96; to &#96;false&#96;.</span><br><span class="line">  security: false</span><br><span class="line">  betterPerformance: true</span><br></pre></td></tr></table></figure>
+
+<p>这个功能依赖<code>hexo-leancloud-counter-security</code>模块，需要安装该插件。</p>
+<p>注意这个 appid 和 appkey 跟上面开启 valine 评论使用的 leanCloud 是一样的，但是需要在 leancloud 中创建 classes 对象存储，具体方式可以 Google 一下。</p>
+<h2 id="开启不蒜子统计功能"><a href="#开启不蒜子统计功能" class="headerlink" title="开启不蒜子统计功能"></a>开启不蒜子统计功能</h2><p>目前不蒜子统计网站统计做的还可以，网站访问量主要是分为 pv 和 uv 两种，pv 是指页面访问量，每访问一次或者刷新一次页面后该页面的 pv+1，而 uv 是指独立 ip 访问量，就是说一天内同一 ip 访问一个页面 N 次，uv 都只是 + 最开始的那一次。一般用 pv 作为页面的访问量，uv 作为页面的访客量。</p>
+<p>搜索 busuanzi_count，可以配置如下，也可以使用默认设置。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Show Views&#x2F;Visitors of the website&#x2F;page with busuanzi.</span><br><span class="line"># Get more information on http:&#x2F;&#x2F;ibruce.info&#x2F;2015&#x2F;04&#x2F;04&#x2F;busuanzi&#x2F;</span><br><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  site_uv: true #total visitors</span><br><span class="line">  site_uv_icon:  #user-circle</span><br><span class="line">  site_uv_header: 你是来访的第</span><br><span class="line">  site_uv_footer: 位小伙伴</span><br><span class="line">  site_pv: false #total views</span><br><span class="line">  site_pv_icon: eye</span><br><span class="line">  site_pv_header: 访问次数：</span><br><span class="line">  site_pv_footer: 次</span><br><span class="line">  post_views: false</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
+
+<p>注意其中的 post_views 与上面的 leanCloud_visitors 冲突，两者都是显示文章阅读量，只开启一个就可以了。</p>
+<h2 id="开启本地博客搜索功能"><a href="#开启本地博客搜索功能" class="headerlink" title="开启本地博客搜索功能"></a>开启本地博客搜索功能</h2><p>提升读者用户体验，博客内肯定是需要一个全局搜索按钮的。当然hexo已经集成了几款开源的搜索插件，一般都使用的是 local_search。</p>
+<p>搜索 local_search，设置代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-generator-searchdb</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # unescape html strings to the readable one</span><br><span class="line">  unescape: false</span><br></pre></td></tr></table></figure>
+
+<p>注意该搜索功能需要依赖<code>hexo-generator-searchdb</code>插件，依然还是使用命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>来进行安装。然后 在 hexo-blog站点根目录配置文件 _config.xml 的末尾，加入以下代码即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改加载特效"><a href="#修改加载特效" class="headerlink" title="修改加载特效"></a>修改加载特效</h2><p>由于网页不可能一直都秒进，总会等待一段时间的，所以可以修改一下加载的特效。Next 已经集成了很多加载特效，可以在下面选项中在线调试测试一下。</p>
+<p>搜索 pace，找到如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line">pace: false</span><br><span class="line"># Themes list:</span><br><span class="line">#pace-theme-big-counter</span><br><span class="line">#pace-theme-bounce</span><br><span class="line">#pace-theme-barber-shop</span><br><span class="line">#pace-theme-center-atom</span><br><span class="line">#pace-theme-center-circle</span><br><span class="line">#pace-theme-center-radar</span><br><span class="line">#pace-theme-center-simple</span><br><span class="line">#pace-theme-corner-indicator</span><br><span class="line">#pace-theme-fill-left</span><br><span class="line">#pace-theme-flash</span><br><span class="line">#pace-theme-loading-bar</span><br><span class="line">#pace-theme-mac-osx</span><br><span class="line">#pace-theme-minimal</span><br><span class="line"># For example</span><br><span class="line"># pace_theme: pace-theme-center-simple</span><br><span class="line">pace_theme: pace-theme-center-radar #默认设置，可以修改为上述任何一个</span><br></pre></td></tr></table></figure>
+
+<p>可以自己修改后使用<code>hexo s</code>本地调试挑选自己喜欢的加载样式。</p>
+<h2 id="开启3D背景"><a href="#开启3D背景" class="headerlink" title="开启3D背景"></a>开启3D背景</h2><p>给博客添加 3D 背景特效</p>
+<p>配置文件中代码如下:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Canvas-nest</span><br><span class="line">canvas_nest: false</span><br><span class="line"></span><br><span class="line"># three_waves</span><br><span class="line">three_waves: false</span><br><span class="line"></span><br><span class="line"># canvas_lines</span><br><span class="line">canvas_lines: false</span><br><span class="line"></span><br><span class="line"># canvas_sphere</span><br><span class="line">canvas_sphere: false</span><br></pre></td></tr></table></figure>
+
+<p>默认为 false，可以自己逐一设置为 true 然后在本地调试查看3D效果。</p>
+<h1 id="Next主题进阶优化配置"><a href="#Next主题进阶优化配置" class="headerlink" title="Next主题进阶优化配置"></a>Next主题进阶优化配置</h1><p>在介绍完 Next 主题的基本配置后，下面才是本文的重头戏，在 Next 进阶配置时，一定需要你懂一些 CSS 和基本的前端知识，不然报错了可能你根本无从寻找问题原因，或者在进行大面积修改前先将主题备份一份，这样出错后找不到原因还能及时止损😂 。</p>
+<h2 id="学会使用浏览器F12定位样式"><a href="#学会使用浏览器F12定位样式" class="headerlink" title="学会使用浏览器F12定位样式"></a>学会使用浏览器F12定位样式</h2><p>发现页面有大量留白？颜色不合自己口味？那就 F12 开始吧，大换装开始！空白区？颜色？背景？圆角矩形？阴影？透明度？超链接样式？侧栏头像圆形并旋转？文章标题前面的竖线和颜色？只需按下 F12，改到自己想要的样式，然后 Copy 到<code>custom.styl</code>文件即可。</p>
+<h2 id="修改博客字体"><a href="#修改博客字体" class="headerlink" title="修改博客字体"></a>修改博客字体</h2><p>博客影响美观的除了样式，就是直接映入读者眼睛的字体了，因此选择一款优雅的字体对博客美感的提升是非常大的，当然，博客字体大小是可以直接修改的：</p>
+<p>文件位置：hexo-blog/themes/next/source/css/_variables/base.styl</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$font-size-base &#x3D; 16px</span><br></pre></td></tr></table></figure>
+
+<p>如果你对字体的选择比较感兴趣，推荐阅读：</p>
+<blockquote>
+<ol>
+<li><a href="https://www.voyax.me/posts/59710/" target="_blank" rel="noopener">Web 中文字体排版指南</a></li>
+<li><a href="https://blog.coding.net/blog/Web-Fonts" target="_blank" rel="noopener">Web 字体的选择和运用</a></li>
+<li><a href="https://segmentfault.com/a/1190000006110417" target="_blank" rel="noopener">如何优雅的选择默认字体（font-family）</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2014/07/chinese_fonts.html" target="_blank" rel="noopener">中文字体网页开发指南</a></li>
+<li><a href="https://csspod.com/using-the-system-font-in-web-content/" target="_blank" rel="noopener">在 Web 内容中使用系统字体</a></li>
+</ol>
+</blockquote>
+<p>首先对于汉字来说，因为其字体库太大，通常都是调用本地中文字体库。然而，不同设备有不同默认中文字体和中文字体库，想要尽可能在不同设备上有较好的显示效果，就要在调用不同设备的本地字体库中显示效果较好的中文字体。下面附上我参考的大佬的字体选择：</p>
+<p>文件位置：hexo-blog/themes/next/source/css/_variables/base.styl</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Font families.</span><br><span class="line">$font-family-chinese      &#x3D; -apple-system, BlinkMacSystemFont, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;STHeiti&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, &quot;Droid Sans Fallback&quot;, &quot;Microsoft YaHei&quot;</span><br><span class="line"></span><br><span class="line">$font-family-base         &#x3D; $font-family-chinese, sans-serif</span><br><span class="line">$font-family-base         &#x3D; get_font_family(&#39;global&#39;), $font-family-chinese, sans-serif if get_font_family(&#39;global&#39;)</span><br><span class="line"></span><br><span class="line">$font-family-logo         &#x3D; $font-family-base</span><br><span class="line">$font-family-logo         &#x3D; get_font_family(&#39;logo&#39;), $font-family-base if get_font_family(&#39;logo&#39;)</span><br><span class="line"></span><br><span class="line">$font-family-headings     &#x3D; $font-family-base</span><br><span class="line">$font-family-headings     &#x3D; get_font_family(&#39;headings&#39;), $font-family-base if get_font_family(&#39;headings&#39;)</span><br><span class="line"></span><br><span class="line">$font-family-posts        &#x3D; $font-family-base</span><br><span class="line">$font-family-posts        &#x3D; get_font_family(&#39;posts&#39;), $font-family-base if get_font_family(&#39;posts&#39;)</span><br><span class="line"></span><br><span class="line">$font-family-monospace    &#x3D; $font-family-chinese, monospace</span><br><span class="line">$font-family-monospace    &#x3D; Menlo, Monaco, Consolas, get_font_family(&#39;codes&#39;), $font-family-chinese, monospace if get_font_family(&#39;codes&#39;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="博客推广及优化"><a href="#博客推广及优化" class="headerlink" title="博客推广及优化"></a>博客推广及优化</h2><h3 id="手动推广"><a href="#手动推广" class="headerlink" title="手动推广"></a>手动推广</h3><p>大概就是在其它博客或者视频等信息流下面留下自己的博客地址，比如第一件事咱们可以去 next 主题<a href="https://github.com/iissnan/hexo-theme-next/issues/119" target="_blank" rel="noopener">专门的博客分享的issue区</a>留下自己的爪印，或者在搜索引擎中搜索使用 hexo+next 搭建博客的热门教程中，在评论区留下地址，这样就可以手动引流啦。</p>
+<h3 id="搜索引擎SEO收录"><a href="#搜索引擎SEO收录" class="headerlink" title="搜索引擎SEO收录"></a>搜索引擎SEO收录</h3><p>当然手动引流不是长久之计，搜索引擎是互联网上寻找资源的重要手段，而要让别人能够在搜索结果中看到自己的博客文章链接，就必须让搜索引擎收录，怎么操作呢？</p>
+<p>可以直接参考<a href="http://www.ehcoo.com/seo.html" target="_blank" rel="noopener">这篇文章</a>，写的很详细，学会自己使用站长工具抓取自己的网页，然后请求搜索引擎收录 ，查看收录量可以在百度或者 Google 中使用<code>site:bestzuo.cn</code>即site:后面加上域名的方式，如果你是使用 Github Pages，由于百度是默认不抓取 Github 的，所以也需要使用上述方式进行提交。</p>
+<h3 id="间接影响"><a href="#间接影响" class="headerlink" title="间接影响"></a>间接影响</h3><p>除了直接被搜索引擎收录之外，如果有其它被搜索引擎收录的文章中，引用你的某篇文章的链接地址，那么同样可以引流到你的博客，这种称为间接影响，不要小看间接影响，如果你的博客写的很好，经常被引用的话，那么间接影响带来的流量是非常巨大的，但是其中会有一个问题，通过“引流”到达的流量，你需要尽可能地将用户留在自己的博客上，那么如何吸引用户呢？当然是有两个方面：</p>
+<ol>
+<li>博客装饰美观</li>
+<li>文章质量高</li>
+</ol>
+<p>读者的第一印象往往是读者需要阅读的内容的质量，如果质量达到要求，那么读者会注意到博客的界面，如果界面很特别的话，那么读者肯定是马上加入了标签，并且选择多停留一下继续浏览博客的其它内容，那么这里就会引出另外一个问题，就是博客的响应速度，如果读者点击某篇文章或者按钮后响应了半天空白，那么你猜他会怎么做？肯定是直接右上角了啊，所以博客的响应速度一定要优化好。</p>
+<p>如果做到上面三点，那么就算好不容易「骗」到一个浏览量，但是这个读者马上被博客和文章惊呆了，看完文章后，这读者心里美滋滋，认为这么好的文章（博客）必须分享啊，于是可能马上来了一大批满怀期待的读者，然后这批读者又……这时文章的读者数（博客的访问量）就不是简单的加法了～</p>
+<h3 id="知识平台"><a href="#知识平台" class="headerlink" title="知识平台"></a>知识平台</h3><p>直接或间接因为 Google 这样的搜索引擎而来的读者，绝大部分都是技术人员，而他们只希望尽快解决自己的技术问题，这也是他们的目的，这就意味着博客上的一首诗还是很难被欣赏。而要想照亮他人，他人必须要能懂自己的文章，这样也才可能有更强的交互——评论。所以为了不浪费自己的光能，能把自己的光能完完整整地贡献给文明，那就必须也让一首诗也有评论，怎么做呢？让读者的类型多样化，不限于技术人员。还好现在大部分读者也不用搜索引擎了，谁在吞食搜索引擎的用户？移动端。智能手机的迅速普及导致搜索引擎已经不是人们获取知识的主要途径，大部分人已经将手机 APP 上的知识平台作为自己获取知识的主要途径，比如：知乎、简书、微信订阅号……所以，你还可以将自己的文章发布在这些知识平台上的相应分类上，然后留个博客链接，吸引更多类型的读者～</p>
+<h3 id="谷歌分析"><a href="#谷歌分析" class="headerlink" title="谷歌分析"></a>谷歌分析</h3><p>你怎么知道自己推广的效果？你怎么知道有没有人看了自己的博客？哪篇文章最受欢迎？此时有没有人正浏览着自己的博客？自己的文章有没有被引用？这时最常用的就是强大免费的 <a href="https://analytics.google.com/" target="_blank" rel="noopener">Google Analytics</a>，推荐博客建好后，就立即使用。</p>
+<p>如何使用？请务必自备梯子查看 <a href="https://analytics.google.com/analytics/academy/course/6" target="_blank" rel="noopener">Google 官方的教程</a>，开始使用后一定要按照里面的设置，先添加多份 view（数据视图）。</p>
+<h2 id="文章底部加上评分小星星"><a href="#文章底部加上评分小星星" class="headerlink" title="文章底部加上评分小星星"></a>文章底部加上评分小星星</h2><p>淘宝买东西，作为消费者的我们，看评价很重要。现在作为博主，写了一篇文章，很期待读者的反馈。而与淘宝一样，确认收货后，相比评论，更愿意五星好评。那么博客文章怎么加上呢？首先打开<strong>主题配置文件：</strong></p>
+<p>文件位置：hexo-blog/themes/next/_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Star rating support to each article.</span><br><span class="line"># To get your ID visit https:&#x2F;&#x2F;widgetpack.com</span><br><span class="line">rating:</span><br><span class="line">  enable: true</span><br><span class="line">  id:     </span><br><span class="line">  color: f79533</span><br></pre></td></tr></table></figure>
+
+<p>先去注释中的网站，首页点 Rating，然后注册个帐号，填一下自己博客的信息，左上角有个 ID，填进<strong>主题</strong>配置文件中就行，<code>color</code>改成自己喜欢的即可。另：</p>
+<ol>
+<li>可以配置评分方式，侧栏 &gt; Rating &gt; Setting，建议用 IP address 或 Device(cookie)，免登录，毕竟 Socials 里面的选项几乎都被墙，不适合国内网络环境。</li>
+<li>建议在侧栏 &gt; Site &gt; Setting 中勾选 Private 选项。</li>
+<li>上面两步勾选后别忘了点击页面右下方的 <em>SAVE SETTING</em> 绿色按钮保存。</li>
+</ol>
+<p>如果感觉上下留白太多，咋整？浏览器 F12 找元素，调成自己喜欢的值，然后 Copy 到<code>custom.styl</code>即可。经过上面的配置，默认最下面只会显示 5 颗小星星，简洁但不明了😂，怎么加上文字说明呢？编辑下面这个文件，Ctrl + F 搜索<code>rating</code>，找到这段，对比我给出的，在“+”这行所示的位置，加上自己想要的说明和样式即可。</p>
+<p>文件位置：hexo-blog/themes/next/layout/_macro/post.swig</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.rating.enable %&#125;</span><br><span class="line">	&lt;div class&#x3D;&quot;wp_rating&quot;&gt;</span><br><span class="line">+            &lt;div style&#x3D;&quot;color: rgba(0, 0, 0, 0.75); font-size:13px; letter-spacing:3px&quot;&gt;(&gt;看完记得五星好评哦亲&lt;)&lt;&#x2F;div&gt;</span><br><span class="line">			&lt;div id&#x3D;&quot;wpac-rating&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="每篇文章末尾添加致谢"><a href="#每篇文章末尾添加致谢" class="headerlink" title="每篇文章末尾添加致谢"></a>每篇文章末尾添加致谢</h2><p>在<code>hexo-blog/themes/next/layout/_macro</code>中新建一个<code>passage-end-tag.swig</code>文件，并添加如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style&#x3D;&quot;text-align:center;color: #ccc;font-size:14px;&quot;&gt;-------------　　　　本文结束　&lt;i class&#x3D;&quot;fa fa-heart&quot;&gt;&lt;&#x2F;i&gt;　感谢您的阅读　　　　-------------&lt;&#x2F;div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>接着打开<code>\themes\next\layout\_macro\post.swig</code>文件，在<code>post-body</code> 之后， <code>post-footer</code> 之前添加如下“+”部分代码（post-footer 之前两个 div）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">+ &lt;div&gt;</span><br><span class="line">+  &#123;% if not is_index %&#125;</span><br><span class="line">+    &#123;% include &#39;passage-end-tag.swig&#39; %&#125;</span><br><span class="line">+  &#123;% endif %&#125;</span><br><span class="line">+ &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&lt;footer class&#x3D;&quot;post-footer&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>最后，在主题配置文件下，在末尾添加：</p>
+<p>文件位置 hexo-blog/themes/next/_config.xml</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文章末尾添加&quot;本文结束&quot;标记</span><br><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="新增文章时自动打开Markdown编辑器"><a href="#新增文章时自动打开Markdown编辑器" class="headerlink" title="新增文章时自动打开Markdown编辑器"></a>新增文章时自动打开Markdown编辑器</h2><p>由于每次在 命令行中使用<code>hexo n &quot;文章名称&quot;</code>时还要自己去本地目录中打开编辑器，这对于懒癌患者来说实在是太麻烦了😂，那么不如实现一个监听的 js 代码监听新建文章的命令，只要监听到了就自动打开相应的 Markdown编辑器，这样不就方便多了嘛！</p>
+<p>首先在<code>hexo-blog/scripts</code>下新建一个<code>newpost.js</code>文件，如果没有<code>scripts</code>文件可以手动创建一个。</p>
+<p>如果你是 windows 用户，在这个文件中写入如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var spawn &#x3D; require(&#39;child_process&#39;).exec;</span><br><span class="line">hexo.on(&#39;new&#39;, function(data)&#123;</span><br><span class="line">  spawn(&#39;start  &quot;markdown编辑器绝对路径.exe&quot; &#39; + data.path);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>如果是 mac 用户，就写入如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var exec &#x3D; require(&#39;child_process&#39;).exec;</span><br><span class="line">hexo.on(&#39;new&#39;, function(data)&#123;</span><br><span class="line">    exec(&#39;open -a &quot;markdown编辑器绝对路径.app&quot; &#39; + data.path);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>注意里面要修改的是 Markdown 编辑器的绝对路径，我使用的是 Typora ，所以我的绝对路径是<code>/Applications/Typora.app</code>，大家可以对应进行修改。</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>hexo</tag>
+        <tag>Next</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -374,8 +572,154 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Linux命令</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>node安装简洁教程</title>
+    <url>/2020/08/17/node%E5%AE%89%E8%A3%85%E7%AE%80%E6%B4%81%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="先检查本地是否安装node"><a href="#先检查本地是否安装node" class="headerlink" title="先检查本地是否安装node"></a>先检查本地是否安装node</h1><p>命令行输入<code>node</code></p>
+<p>若显示版本信息（如下图），则已经安装。否则下一步。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtwy4ugwij30q20843zj.jpg" alt=""></p>
+<h1 id="mac安装node"><a href="#mac安装node" class="headerlink" title="mac安装node"></a>mac安装node</h1><p>mac 在终端输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
+<p>即可安装。</p>
+<h1 id="前往node官网或者nodejs中文网"><a href="#前往node官网或者nodejs中文网" class="headerlink" title="前往node官网或者nodejs中文网"></a>前往<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node官网</a>或者<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">nodejs中文网</a></h1><p>下载对应系统的安装包。</p>
+<p>windows下载好后一路next安装即可。</p>
+<h1 id="确认是否安装完成"><a href="#确认是否安装完成" class="headerlink" title="确认是否安装完成"></a>确认是否安装完成</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 检查node版本</span><br><span class="line">node -v</span><br><span class="line"></span><br><span class="line"># 检查npm包管理工具版本</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtx4wzz3uj30xc090jsv.jpg" alt=""></p>
+<p>出现以上信息则为安装成功。</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML笔记1</title>
+    <url>/2020/08/15/HTML%E7%AC%94%E8%AE%B01/</url>
+    <content><![CDATA[<h5 id="HTML-超文本标记语言"><a href="#HTML-超文本标记语言" class="headerlink" title="HTML  超文本标记语言"></a>HTML  超文本标记语言</h5><h5 id="五大浏览器："><a href="#五大浏览器：" class="headerlink" title="五大浏览器："></a>五大浏览器：</h5><table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>内核</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IE/Edge</td>
+<td>Trident</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>Gecko</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>WebKit</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>Presto（13年之后，宣布加入谷歌阵营，弃用）</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>Blink （13年从WebKit独立出来，现在chrome和opera都用的blink内核）</td>
+</tr>
+</tbody></table>
+<h6 id="W3C标准由结构-html-表现-css-行为-javascript-三部分组成"><a href="#W3C标准由结构-html-表现-css-行为-javascript-三部分组成" class="headerlink" title="W3C标准由结构(html)   表现(css)  行为(javascript) 三部分组成"></a>W3C标准由结构(html)   表现(css)  行为(javascript) 三部分组成</h6><h6 id="1-标签分块级和行级（内联）两类。"><a href="#1-标签分块级和行级（内联）两类。" class="headerlink" title="1.标签分块级和行级（内联）两类。"></a>1.标签分块级和行级（内联）两类。</h6><p>块级独占一行，能设置宽高，如果不设置，宽度为整行宽度，高度为实际内容高度。</p>
+<p>行级不独占一行，不能设置宽高，宽高为内容实际的宽高。</p>
+<p>块级标签可以通过设置样式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">display:inline</span><br></pre></td></tr></table></figure>
+<p>转换成行级标签<br>行级标签可以通过设置样式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">display:block</span><br></pre></td></tr></table></figure>
+<p>转换成块级标签</p>
+<h6 id="2-常见标签有："><a href="#2-常见标签有：" class="headerlink" title="2.常见标签有："></a>2.常见标签有：</h6><p>块级：<code>div</code>    <code>p</code>    <code>h1-h6</code>    <code>ul</code>    <code>ol</code>    <code>table</code>    <code>address</code>    <code>pre</code>     等</p>
+<p>行级：<code>span</code>    <code>a</code>    <code>b</code>    <code>strong</code>    <code>i</code>    <code>em</code>    <code>sub</code>    <code>sup</code>等</p>
+<p>特殊：<code>img</code>属于行级块标签，相当于执行了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">display:inline-block</span><br></pre></td></tr></table></figure>
+<p>操作</p>
+<p><code>a</code>链接标签可以执行<code>display:inline-block</code>转换成行级块标签，这样就可以调整宽高样式。</p>
+<h6 id="3-W3C中的嵌套规范"><a href="#3-W3C中的嵌套规范" class="headerlink" title="3.W3C中的嵌套规范"></a>3.W3C中的嵌套规范</h6><blockquote>
+<ol>
+<li>块级元素可以包含块级或行级元素，而行级元素只能包含行级元素。</li>
+<li>2.<code>p</code>    <code>h1-h6</code>    <code>dt</code>    标签中只能包含行级标签，不能再包含块级标签。</li>
+<li>块级与块级并列，行级与行级并列。</li>
+</ol>
+</blockquote>
+<h5 id="form标签"><a href="#form标签" class="headerlink" title="form标签"></a><strong>form</strong>标签</h5><p>1.常用属性：</p>
+<p>​    <strong>name：</strong>表单名称</p>
+<p>​    <strong>action：</strong>表单数据提交的地方（通常是一个后台文件名 .jsp/.php/.asp/.py等，或网址。如果是#，则表示提交到当前文件下）</p>
+<p>​    <strong>method：</strong>前端提交数据到后端的方法，主要有: <strong>post</strong>和<strong>get</strong>。默认是<strong>get</strong></p>
+<p>2.表单元素分为四类：<strong>input</strong>类    <strong>textarea</strong>类    <strong>select</strong>类    <strong>button</strong>类</p>
+<p> 1.<strong>input类</strong>   主要完成输入或按钮发出指令</p>
+<p>type属性值：<strong>text</strong>    <strong>password</strong>    <strong>radio</strong>    <strong>checkbox</strong>    <strong>file</strong>    <strong>button</strong>    <strong>image</strong>    <strong>submit</strong>    <strong>reset</strong></p>
+<blockquote>
+<p>text：单行文本输入框，type默认为text。</p>
+<p>属性：placeholder（文本框里默认显示的提示文字）、name（命名）、value（赋予初始值）、minlength和maxlength（最少和最多输入的值）、readonly（只读）、disabled（不能修改）、pattern（正则匹配）</p>
+</blockquote>
+<blockquote>
+<p>password：密码框 </p>
+<p>属性：与text一致</p>
+</blockquote>
+<blockquote>
+<p>radio：单选框，通常是两项以上。</p>
+<p>属性：name（必须有）、value、checked</p>
+</blockquote>
+<blockquote>
+<p>checkbox：复选框</p>
+<p>属性：与radio大致相同</p>
+</blockquote>
+<blockquote>
+<p>file：文件上传按钮</p>
+</blockquote>
+<blockquote>
+<p>button：普通按钮。通常用它去调用脚本代码</p>
+<p>常用属性：value（按钮上显示的文字）、disabled（失效）</p>
+</blockquote>
+<blockquote>
+<p>image：图片按钮，用法与button一样。它也有提交功能，与submit一致。</p>
+<p>特殊属性：src（用来加载提示图片，用它替换了value）</p>
+</blockquote>
+<blockquote>
+<p>submit：提交按钮，用来将表单数据提交到后台</p>
+<p>reset：重置按钮，用来将表单所有组件输入的内容全部清空，还原至初始状态。</p>
+<p>常用属性：value（按钮上显示的文字）、disabled（失效）</p>
+</blockquote>
+<p> 2.<strong>textarea类</strong>    文本域，多行文本框，主要用于输入大批量的内容</p>
+<blockquote>
+<p>常用属性：name、id、cols（列数）、rows（行数）、pacleholder（默认显示的文字）、required（必须输入）、minlength和maxlength、value</p>
+</blockquote>
+<p> 3.<strong>select类</strong>    下拉列表框  用<code>option</code>呈现每个选项，默认是单项选择</p>
+<blockquote>
+<p>属性：multiple（表示可以多选，这时的下拉列表框变成了列表框）、size（最多显示的行数）</p>
+</blockquote>
+<p> 4.<strong>button类</strong>    普通按钮。可以单独使用，不写在form标签中。如果写在form中有提交功能。</p>
+<h5 id="iframe框架标签"><a href="#iframe框架标签" class="headerlink" title="iframe框架标签"></a><strong>iframe</strong>框架标签</h5><p>框架集，用来将多个网页文件组合成一个文件。</p>
+<p><code>&lt;iframe&gt;</code>标签会创建包含另外一个文档的内联框架，镶嵌在一个网页中的另一个网页。</p>
+<blockquote>
+<p>属性：</p>
+<p>name：框架名</p>
+<p>src：引入的外部html文件</p>
+<p>scrolling：滚动条（yes、no、auto）</p>
+<p>width和height：宽度和高度</p>
+<p>frameborder：是否有边框（1表示有、0表示没有）</p>
+<p>marginheight：框架与顶部和底端的距离（百分比或px表示）</p>
+<p>marginwidth：框架与左边和右边的距离（百分比或px表示）</p>
+</blockquote>
+<p>​    </p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>HTML</tag>
       </tags>
   </entry>
 </search>
