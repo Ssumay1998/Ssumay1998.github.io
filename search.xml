@@ -16,6 +16,7 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>hexo搭建个人博客</p>
 ]]></content>
   </entry>
   <entry>
@@ -369,6 +370,31 @@
       <tags>
         <tag>笔记</tag>
         <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>node安装简洁教程</title>
+    <url>/2020/08/17/node%E5%AE%89%E8%A3%85%E7%AE%80%E6%B4%81%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="先检查本地是否安装node"><a href="#先检查本地是否安装node" class="headerlink" title="先检查本地是否安装node"></a>先检查本地是否安装node</h1><p>命令行输入<code>node</code></p>
+<p>若显示版本信息（如下图），则已经安装。否则下一步。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtwy4ugwij30q20843zj.jpg" alt=""></p>
+<h1 id="mac安装node"><a href="#mac安装node" class="headerlink" title="mac安装node"></a>mac安装node</h1><p>mac 在终端输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
+<p>即可安装。</p>
+<h1 id="前往node官网或者nodejs中文网"><a href="#前往node官网或者nodejs中文网" class="headerlink" title="前往node官网或者nodejs中文网"></a>前往<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node官网</a>或者<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">nodejs中文网</a></h1><p>下载对应系统的安装包。</p>
+<p>windows下载好后一路next安装即可。</p>
+<h1 id="确认是否安装完成"><a href="#确认是否安装完成" class="headerlink" title="确认是否安装完成"></a>确认是否安装完成</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 检查node版本</span><br><span class="line">node -v</span><br><span class="line"></span><br><span class="line"># 检查npm包管理工具版本</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghtx4wzz3uj30xc090jsv.jpg" alt=""></p>
+<p>出现以上信息则为安装成功。</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>node.js</tag>
       </tags>
   </entry>
 </search>
